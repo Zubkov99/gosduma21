@@ -1,3 +1,33 @@
-h1 {
-    color: green;
+header {
+    background-color: #073972;
+    width: 100vw;
+    height: 100vh;
+
+    h1 {
+        color: white;
+        font-family: Golos;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        text-align: right;
+        margin-left: 7vw;
+        width: 90vw;
+    }
+
+    img {
+        width: 35vw;
+        margin-left: 50vw; 
+        margin-top: -4vh;       
+    }
+
+    .header__description {
+        width: 65vw;
+        color: white;
+        font-family: "Golos-Text_Regular";
+        font-style: normal;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 20%;
+        margin-top: 10px;
+    }
 }
