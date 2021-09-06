@@ -1,0 +1,36 @@
+.main {
+    background-color: #1E32E2;
+    height: 1000px;
+    
+
+    
+    .main__iframe {
+        position: relative;
+        top: 40px;
+        h2 {
+            @include adaptiv-font(40, 30);
+            font-family: Golos;
+            font-style: normal;
+            font-weight: normal;
+            // font-size: 40px;
+            line-height: 11px;
+            color: #FFFFFF;;
+            padding-bottom: 40px;
+        }
+
+        text-align: center;
+
+        .iframe {
+            // border: dashed 2px red;
+            width: 80vw;
+            height: 40vw;
+            min-height: 200px;
+            border-radius: 20px;
+
+
+
+        }
+    }
+}
+
+
