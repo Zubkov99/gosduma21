@@ -16,13 +16,14 @@ $maxWidth: 1408;
 header {
     background-image: url('/img/bcImg.png');
     height: auto;
-    min-height: 800px;
+    min-height: 100vh;
     width: 100%;
-    padding-top: 100px;
+    padding-bottom: 20px;
+
 
     .header__wrapeer {
         display: flex;
-
+        padding-top: calc(30px + (200 - 70) * ((100vw - 320px) / (1400 - 320)));
 
         img {
             max-width: 700px;
@@ -49,8 +50,6 @@ header {
             p {
                 @include adaptiv-font(22, 20);
                 @include adaptiv-line(34, 27);
-                // line-height: 34px;
-                // font-size: 22px;
                 margin-top: 55px;
                 width: 30vw;
             }
@@ -58,8 +57,11 @@ header {
     }
 }
 
-@media (max-width: 767px) {
-    h1 {
-        font-size: calc(40px + (35 + 35 * 0.7) *(100vw -320px / 1408));
+@media (max-width: 1000px) {
+    // img {
+    //     padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)))
+    // }
+    .header {
+        min-height: 500px;
     }
 }
