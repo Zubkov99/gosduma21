@@ -10,5 +10,13 @@ if(window.innerWidth < 1000) {
     listImh.style.display = 'none' 
 }
 
+const mainConteiners = document.querySelector('.main__conteiners');
+if(window.innerWidth < 1100) {
+    mainConteiners.style.display = 'block'
+} else {
+    mainConteiners.style.display = 'grid'
+}
+
+
 
 

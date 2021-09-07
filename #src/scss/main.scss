@@ -1,13 +1,24 @@
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+   }
+
+   @mixin adaptiv-line($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+   }
+
+
 .main {
-    // background-color: #1E32E2;
-    // background-color: #000000;
     background-color: #fff;
-
-
-    height: 1000px;
+    height: auto;
     
+    .hide {
+        display: none;
+    }
 
-    
     .main__iframe {
         position: relative;
         top: 40px;
@@ -17,8 +28,8 @@
             font-style: normal;
             font-weight: normal;
             // font-size: 40px;
-            line-height: 11px;
-            color: #FFFFFF;
+            // line-height: 11px;
+            // color: #FFFFFF;
             color: #000000;
             padding-bottom: 40px;
         }
@@ -39,35 +50,57 @@
         width: 100vw;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        // grid-template-columns: 1fr 1fr;
-        grid-row: 25vw 25vw;
-        // grid-row: auto auto;
+        
+        .main__conteiners-item{
+
+            padding-bottom: 75px;
 
 
-        height: 600px;
+            .main__conteiners-item--img{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            h1{
+                font-family: "Golos-Text_Regular";
+                font-style: normal;
+                color: #FFFFFF;
+                @include adaptiv-font(30, 16);
+                @include adaptiv-line(40, 16);
 
+                // font-size: calc(14px + 16 *(100vw / 1408));
+                // padding-top: 110px;
+                padding-top: calc(10px + (110 - 10) * ((100vw - 320px) / (1440 - 320)));
+                padding-left: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320 )));
+                padding-bottom: 47px;
+                width: 30vw;
+            }
+
+            img {
+                max-width: 350px;
+                max-height: 350px;
+            }
+        }
+
+        .main__conteiners-item--text {
+            span {
+                padding-left: 101px;
+            }
+        }
             #firstItem {
                 background-color: #0007B7;
-                // width: 50vw;
-                // height: 200px;
             }
 
             #secondItem {
                 background-color: #1E32E2;
-                // width: 50vw;
-                // height: 200px;
             }
 
             #thirdItem{
                 background-color: #0007B7;
-                // width: 50vw;
-                // height: 200px;  
             }
 
             #fourthItem {
                 background-color: #1E32E2;
-                // width: 50vw;
-                // height: 200px; 
             }
     }
 
