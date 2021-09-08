@@ -67,8 +67,8 @@ header .header__wrapeer {
 }
 
 header .header__wrapeer img {
-  max-width: 700px;
-  max-height: 500px;
+  width: calc(105px + 339 * ((100vw - 320px) / 1088));
+  height: calc(131px + 393 * ((100vw - 320px) / 1088));
 }
 
 header .header__wrapeer .header__description {
@@ -93,6 +93,9 @@ header .header__wrapeer .header__description p {
 }
 
 .main {
+  font-family: "Golos-Text_Regular";
+  font-style: normal;
+  font-weight: normal;
   background-color: #fff;
   height: auto;
 }
@@ -109,9 +112,6 @@ header .header__wrapeer .header__description p {
 
 .main .main__iframe h2 {
   font-size: calc(30px + 10 * ((100vw - 320px) / 1088));
-  font-family: Golos;
-  font-style: normal;
-  font-weight: normal;
   color: #000000;
   padding-bottom: 40px;
 }
@@ -130,60 +130,117 @@ header .header__wrapeer .header__description p {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
 }
 
 .main .main__conteiners .main__conteiners-item {
   padding-bottom: 75px;
-}
-
-.main .main__conteiners .main__conteiners-item .main__conteiners-item--img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: calc(10px + (110 - 10) * ((100vw - 320px) / (1440 - 320)));
 }
 
 .main .main__conteiners .main__conteiners-item h1 {
-  font-family: "Golos-Text_Regular";
   font-style: normal;
   color: #FFFFFF;
   font-size: calc(16px + 14 * ((100vw - 320px) / 1088));
   line-height: calc(16px + 24 * ((100vw - 320px) / 1088));
-  padding-top: calc(10px + (110 - 10) * ((100vw - 320px) / (1440 - 320)));
-  padding-left: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320 )));
-  padding-bottom: 47px;
-  width: 30vw;
+  padding-bottom: 40px;
+  width: 27vw;
 }
 
-.main .main__conteiners .main__conteiners-item img {
-  max-width: 350px;
-  max-height: 350px;
+.main .main__conteiners .main__conteiners-item--text {
+  padding-left: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320 )));
 }
 
 .main .main__conteiners .main__conteiners-item--text span {
-  padding-left: 101px;
+  color: #007AFF;
+  font-size: calc(10px + 10 * ((100vw - 320px) / 1088));
+}
+
+.main .main__conteiners .main__conteiners-item--text p {
+  color: #FFFFFF;
+  font-size: calc(10px + 8 * ((100vw - 320px) / 1088));
+  line-height: calc(12px + 12 * ((100vw - 320px) / 1088));
 }
 
 .main .main__conteiners #firstItem {
   background-color: #0007B7;
 }
 
+.main .main__conteiners #firstItem img {
+  width: calc(115px + 126 * ((100vw - 320px) / 1088));
+  height: calc(106px + 103 * ((100vw - 320px) / 1088));
+}
+
 .main .main__conteiners #secondItem {
   background-color: #1E32E2;
 }
 
-.main .main__conteiners #thirdItem {
-  background-color: #0007B7;
+.main .main__conteiners #secondItem img {
+  width: calc(110px + 190 * ((100vw - 320px) / 1088));
+  height: calc(75px + 130 * ((100vw - 320px) / 1088));
 }
 
-.main .main__conteiners #fourthItem {
+.main .main__conteiners #thirdItem {
   background-color: #1E32E2;
 }
 
-@media (max-width: 1000px) {
+.main .main__conteiners #thirdItem img {
+  width: calc(115px + 100 * ((100vw - 320px) / 1088));
+  height: calc(112px + 97 * ((100vw - 320px) / 1088));
+}
+
+.main .main__conteiners #fourthItem {
+  background-color: #0007B7;
+}
+
+.main .main__conteiners #fourthItem img {
+  width: calc(77px + 68 * ((100vw - 320px) / 1088));
+  height: calc(112px + 100 * ((100vw - 320px) / 1088));
+}
+
+@media (max-width: 905px) {
+  .main .main__conteiners {
+    background-color: #00001E;
+    padding-top: 50px;
+    display: block;
+  }
+
+  .main .main__conteiners .main__conteiners-item {
+    margin: 0 auto;
+    width: 95vw;
+    margin-bottom: 5px;
+    background-color: #19192A !important;
+    border-radius: 10px;
+  }
+
+  .main .main__conteiners .main__conteiners-item h1 {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 902px) {
   .header {
     min-height: 500px;
+  }
+
+  .header .header__wrapeer .header__description h1 {
+    width: 85vw;
+  }
+
+  .header .header__wrapeer .header__description p {
+    width: 85vw;
+  }
+
+  .header .header__wrapeer img {
+    position: relative;
+    right: 230px;
+    opacity: 0.7;
   }
 }

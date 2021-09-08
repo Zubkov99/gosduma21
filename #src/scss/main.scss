@@ -1,17 +1,8 @@
-@mixin adaptiv-font($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-   }
-
-   @mixin adaptiv-line($pcSize, $mobSize) {
-    $addSize: $pcSize - $mobSize;
-    $maxWidth: $maxWidth - 320;
-    line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
-   }
-
-
 .main {
+    // font-family: Golos;
+    font-family: "Golos-Text_Regular";
+    font-style: normal;
+    font-weight: normal;
     background-color: #fff;
     height: auto;
     
@@ -24,12 +15,6 @@
         top: 40px;
         h2 {
             @include adaptiv-font(40, 30);
-            font-family: Golos;
-            font-style: normal;
-            font-weight: normal;
-            // font-size: 40px;
-            // line-height: 11px;
-            // color: #FFFFFF;
             color: #000000;
             padding-bottom: 40px;
         }
@@ -37,7 +22,6 @@
         text-align: center;
 
         .iframe {
-            // border: dashed 2px red;
             width: 80vw;
             height: 40vw;
             min-height: 200px;
@@ -50,62 +34,95 @@
         width: 100vw;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+        
         
         .main__conteiners-item{
-
             padding-bottom: 75px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: calc(10px + (110 - 10) * ((100vw - 320px) / (1440 - 320)));
 
-
-            .main__conteiners-item--img{
-                display: flex;
-                justify-content: space-between;
-            }
-            
             h1{
-                font-family: "Golos-Text_Regular";
                 font-style: normal;
                 color: #FFFFFF;
                 @include adaptiv-font(30, 16);
-                @include adaptiv-line(40, 16);
-
-                // font-size: calc(14px + 16 *(100vw / 1408));
-                // padding-top: 110px;
-                padding-top: calc(10px + (110 - 10) * ((100vw - 320px) / (1440 - 320)));
-                padding-left: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320 )));
-                padding-bottom: 47px;
-                width: 30vw;
+                @include adaptiv-line(40, 16);       
+                padding-bottom: 40px;
+                width: 27vw;
             }
 
-            img {
-                max-width: 350px;
-                max-height: 350px;
-            }
         }
 
         .main__conteiners-item--text {
+            padding-left: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320 )));
             span {
-                padding-left: 101px;
+                color: #007AFF;
+                @include adaptiv-font(20, 10);
             }
+            p {
+                color: #FFFFFF;
+                @include adaptiv-font(18, 10);
+                @include adaptiv-line(24, 12);
+            }
+
         }
             #firstItem {
                 background-color: #0007B7;
+                img {
+                    @include adaptiv-imgWidth(241, 115);
+                    @include adaptiv-imgHeight(209, 106);
+                }
             }
 
             #secondItem {
                 background-color: #1E32E2;
+                img {
+                    @include adaptiv-imgWidth(300, 110);
+                    @include adaptiv-imgHeight(205, 75);
+                }
+
             }
 
             #thirdItem{
-                background-color: #0007B7;
+                background-color: #1E32E2;
+                img {
+                    @include adaptiv-imgWidth(215, 115);
+                    @include adaptiv-imgHeight(209, 112);
+                }
             }
 
             #fourthItem {
-                background-color: #1E32E2;
+                background-color: #0007B7;
+                img {
+                    @include adaptiv-imgWidth(145, 77);
+                    @include adaptiv-imgHeight(212, 112);
+                }
             }
     }
-
-
-
 }
 
+
+@media (max-width: 905px) {
+    .main {
+        .main__conteiners {
+            background-color: #00001E;
+            padding-top: 50px;
+
+            display: block;
+            .main__conteiners-item {
+                margin: 0 auto;
+                width: 95vw;
+                margin-bottom: 5px;
+                background-color: #19192A !important;
+                border-radius: 10px;
+
+                h1 {
+                width: 60vw;
+                }
+            }
+        }
+    }
+
+}
 
