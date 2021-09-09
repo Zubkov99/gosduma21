@@ -35,20 +35,25 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto auto;
+        // grid-template-rows: max(auto, 500px);
+
         
         
         .main__conteiners-item{
-            padding-bottom: 75px;
+            // padding-bottom: 75px;
+            padding-bottom: calc(10px + (75 - 15) * ((100vw - 320px) / (1400 - 320)));
+
             display: flex;
             justify-content: space-between;
-            padding-top: calc(10px + (110 - 10) * ((100vw - 320px) / (1440 - 320)));
+            padding-top: calc(10px + (80 - 10) * ((100vw - 320px) / (1440 - 320)));
 
             h1{
                 font-style: normal;
                 color: #FFFFFF;
                 @include adaptiv-font(30, 16);
-                @include adaptiv-line(40, 16);       
-                padding-bottom: 40px;
+                @include adaptiv-line(40, 16);    
+                padding-bottom: calc(10px + (40 - 10) * ((100vw - 320px) / (1440 - 320)));   
+                // padding-bottom: 40px;
                 width: 27vw;
             }
 
@@ -62,13 +67,17 @@
             }
             p {
                 color: #FFFFFF;
+                padding-bottom: 20px;
                 @include adaptiv-font(18, 10);
-                @include adaptiv-line(24, 12);
+                @include adaptiv-line(26, 13);
             }
 
         }
             #firstItem {
                 background-color: #0007B7;
+                // max-height: 300px;
+
+
                 img {
                     @include adaptiv-imgWidth(241, 115);
                     @include adaptiv-imgHeight(209, 106);
@@ -77,6 +86,9 @@
 
             #secondItem {
                 background-color: #1E32E2;
+                // grid-row: span 2;
+                
+
                 img {
                     @include adaptiv-imgWidth(300, 110);
                     @include adaptiv-imgHeight(205, 75);
@@ -103,26 +115,31 @@
 }
 
 
-@media (max-width: 905px) {
+@media (max-width: 900px) {
     .main {
         .main__conteiners {
             background-color: #00001E;
             padding-top: 50px;
-
             display: block;
+
+
+
             .main__conteiners-item {
+                text-align: center;
                 margin: 0 auto;
                 width: 95vw;
                 margin-bottom: 5px;
                 background-color: #19192A !important;
                 border-radius: 10px;
+	            flex-direction: column-reverse;
+                align-items: center;
 
                 h1 {
-                width: 60vw;
+                width: 90%;
+                margin-top: 20px;
                 }
             }
         }
     }
 
 }
-
