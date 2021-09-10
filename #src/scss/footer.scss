@@ -1,0 +1,21 @@
+footer {
+    height: 1000px;
+
+    .footer__conteiner {
+        margin-top: 200px;
+        margin-left: 200px;
+        background-color: darkblue;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        transition-duration: 2s;
+        transition-property: background-color, top;
+
+    }
+
+    .footer__conteiner:hover {
+        top: 1px;
+        // box-shadow: 0 5px 0px #3c354a;
+        background-color: red;
+    }
+}

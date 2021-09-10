@@ -31,9 +31,3 @@ spanItems.forEach(item => {
 });
 
 
-
-
-if(window.innerWidth < 900) {
-
-}
-

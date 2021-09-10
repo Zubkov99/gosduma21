@@ -101,7 +101,7 @@ header .header__wrapeer .header__description p {
 }
 
 .main .hide {
-  display: none;
+  visibility: collapse;
 }
 
 .main .main__iframe {
@@ -135,6 +135,9 @@ header .header__wrapeer .header__description p {
 }
 
 .main .main__conteiners .main__conteiners-item {
+  -webkit-transition-duration: 1s;
+       -o-transition-duration: 1s;
+          transition-duration: 1s;
   padding-bottom: calc(10px + (75 - 15) * ((100vw - 320px) / (1400 - 320)));
   display: -webkit-box;
   display: -ms-flexbox;
@@ -161,6 +164,19 @@ header .header__wrapeer .header__description p {
 .main .main__conteiners .main__conteiners-item--text span {
   color: #007AFF;
   font-size: calc(10px + 10 * ((100vw - 320px) / 1088));
+  cursor: pointer;
+  position: relative;
+  -webkit-transition-duration: 1000ms, 100ms;
+       -o-transition-duration: 1000ms, 100ms;
+          transition-duration: 1000ms, 100ms;
+  -webkit-transition-property: background-color, top;
+  -o-transition-property: background-color, top;
+  transition-property: background-color, top;
+}
+
+.main .main__conteiners .main__conteiners-item--text span:hover {
+  background-color: #ffffff;
+  top: 2px;
 }
 
 .main .main__conteiners .main__conteiners-item--text p {
@@ -204,6 +220,44 @@ header .header__wrapeer .header__description p {
 .main .main__conteiners #fourthItem img {
   width: calc(77px + 68 * ((100vw - 320px) / 1088));
   height: calc(112px + 100 * ((100vw - 320px) / 1088));
+}
+
+.main:hover {
+  background-color: black;
+  -webkit-transition-duration: 15s;
+       -o-transition-duration: 15s;
+          transition-duration: 15s;
+}
+
+.main:hover h2 {
+  color: white;
+  -webkit-transition-duration: 15s;
+       -o-transition-duration: 15s;
+          transition-duration: 15s;
+}
+
+footer {
+  height: 1000px;
+}
+
+footer .footer__conteiner {
+  margin-top: 200px;
+  margin-left: 200px;
+  background-color: darkblue;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  -webkit-transition-duration: 2s;
+       -o-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: background-color, top;
+  -o-transition-property: background-color, top;
+  transition-property: background-color, top;
+}
+
+footer .footer__conteiner:hover {
+  top: 1px;
+  background-color: red;
 }
 
 @media (max-width: 902px) {

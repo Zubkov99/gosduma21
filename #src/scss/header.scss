@@ -11,7 +11,8 @@ $maxWidth: 1408;
     $maxWidth: $maxWidth - 320;
     line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
    }
-   
+// Dupin gnida i pizdabol
+
    @mixin adaptiv-imgWidth($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
     $maxWidth: $maxWidth - 320;
@@ -30,6 +31,7 @@ header {
     min-height: 100vh;
     width: 100vw;
     padding-bottom: 20px;
+
 
 
     .header__wrapeer {
@@ -69,6 +71,7 @@ header {
         }
     }
 }
+
 
 @media (max-width: 902px) {
 
