@@ -7,10 +7,7 @@
     height: auto;
     
     .hide {
-        // display: none;
-        // visibility: hidden;
-        // visibility: inherit;
-        visibility: collapse;
+        display: none;
     }
 
     .main__iframe {
@@ -75,7 +72,6 @@
             span:hover {
                 background-color: #ffffff;
                 top: 2px;
-                // transition-duration: 1000ms;
 
             }
             p {
@@ -124,19 +120,15 @@
                 }
             }
     }
-    // transition-duration: 2s;
 }
 
 .main:hover {
-    // background-color: #00001E;
-    background-color: black;
+    background-color: #00001E;
+    transition-duration: 10s;
 
-    transition-duration: 15s;
-    // color: white;
     h2 {
-        color: white;
-    transition-duration: 15s;
-
+    color: #FFFFFF;
+    transition-duration: 10s;
     }
 }
 

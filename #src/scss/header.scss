@@ -32,8 +32,6 @@ header {
     width: 100vw;
     padding-bottom: 20px;
 
-
-
     .header__wrapeer {
         display: flex;
         padding-top: calc(30px + (200 - 70) * ((100vw - 320px) / (1400 - 320)));
@@ -41,12 +39,10 @@ header {
         img {
             @include adaptiv-imgWidth(444, 105);
             @include adaptiv-imgHeight(524, 131);
-            // max-width: 700px;
-            // max-height: 500px;
         }
 
         .header__description {
-            color: white;
+            color: #FFFF;
             font-family: "Golos-Text_Regular";
             font-style: normal;
             margin-left: 10vw;
