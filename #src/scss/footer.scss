@@ -1,49 +1,49 @@
-footer {
-    height: auto;
-    font-style: normal;
+// footer {
+//     height: auto;
+//     font-style: normal;
 
-    .footer_content {
-        // margin-top: 204px;
-        margin-top: calc(64px + (204 - 140) * ((100vw - 320px) / (1400 - 320)));;
+//     .footer_content {
+//         // margin-top: 204px;
+//         margin-top: calc(64px + (204 - 140) * ((100vw - 320px) / (1400 - 320)));;
 
-        display: flex;
-        justify-content: space-around;
+//         display: flex;
+//         justify-content: space-around;
         
-        .foter_content--text {
-            h3 {
-                font-family: "Golos-Text_Bold";
-                color: #000000;
-                @include adaptiv-line(56, 36);
-                @include adaptiv-font(53, 24);
-                @include adaptiv-imgWidth(631, 304);
-                // width: 43vw;
-            }
+//         .foter_content--text {
+//             h3 {
+//                 font-family: "Golos-Text_Bold";
+//                 color: #000000;
+//                 @include adaptiv-line(56, 36);
+//                 @include adaptiv-font(53, 24);
+//                 @include adaptiv-imgWidth(631, 304);
+//                 // width: 43vw;
+//             }
             
-            img {
-                width: 99px;
-                height: 39px;
-                margin-top: 200px;
-            }
-        }
+//             img {
+//                 width: 99px;
+//                 height: 39px;
+//                 margin-top: 200px;
+//             }
+//         }
         
         
-        .footer_boxImg {
-            width: 213px;
-            height: 383px;
-        }
-    }
-}
+//         .footer_boxImg {
+//             width: 213px;
+//             height: 383px;
+//         }
+//     }
+// }
 
-@media (max-width: 902px) {
-    footer {
-        .footer_content {
-            display: block;
-            h3 {
-                margin: 0 auto;
-            }
-            .footer_boxImg {
-                display: none;
-            }
-        }
-    }
-}
+// @media (max-width: 902px) {
+//     footer {
+//         .footer_content {
+//             display: block;
+//             h3 {
+//                 margin: 0 auto;
+//             }
+//             .footer_boxImg {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
