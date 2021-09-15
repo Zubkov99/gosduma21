@@ -1,49 +1,46 @@
-// footer {
-//     height: auto;
-//     font-style: normal;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-//     .footer_content {
-//         // margin-top: 204px;
-//         margin-top: calc(64px + (204 - 140) * ((100vw - 320px) / (1400 - 320)));;
+.anima {
+    width: 100%;
+    height: auto;
+    position: relative;
 
-//         display: flex;
-//         justify-content: space-around;
-        
-//         .foter_content--text {
-//             h3 {
-//                 font-family: "Golos-Text_Bold";
-//                 color: #000000;
-//                 @include adaptiv-line(56, 36);
-//                 @include adaptiv-font(53, 24);
-//                 @include adaptiv-imgWidth(631, 304);
-//                 // width: 43vw;
-//             }
-            
-//             img {
-//                 width: 99px;
-//                 height: 39px;
-//                 margin-top: 200px;
-//             }
-//         }
-        
-        
-//         .footer_boxImg {
-//             width: 213px;
-//             height: 383px;
-//         }
-//     }
-// }
+    .title1 {
+        font-family: "Golos-Text_Regular";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        white-space: normal;
+        @include adaptiv-line(90, 30);
+        @include adaptiv-font(80, 20);
+        border-top: 5px solid #000;
+    
+    }
+}
 
-// @media (max-width: 902px) {
-//     footer {
-//         .footer_content {
-//             display: block;
-//             h3 {
-//                 margin: 0 auto;
-//             }
-//             .footer_boxImg {
-//                 display: none;
-//             }
-//         }
-//     }
-// }
+
+#canvas1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#title1::before {
+    content: 'проголосуй за ЛДПР';
+    position: absolute;
+    bottom: -40px;
+    @include adaptiv-line(20, 15);
+    @include adaptiv-font(40, 15);
+    // font-size: 35px;
+    text-align: center;
+    width: 100%;
+}

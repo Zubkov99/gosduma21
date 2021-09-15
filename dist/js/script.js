@@ -1,14 +1,3 @@
-// const headerWrapeer = document.querySelector('.header__wrapeer');
-// const listImh = document.querySelector('.header__wrapeer img');
-// const headerHeading = document.querySelector('.header h1');
-// const headerText = document.querySelector('.header__description p');
-
-// if(window.innerWidth < 900) {
-//     // headerWrapeer.style.display = 'block'
-//     headerHeading.style.width = '100%'
-//     headerText.style.width = '75vw'
-//     // listImh.style.display = 'none' 
-// }
 
 const spanItems = document.querySelectorAll('.main__conteiners-item--text span');
 const conteiner = document.querySelectorAll('.main__conteiners-item');
@@ -26,9 +15,12 @@ spanItems.forEach(item => {
         } else {
         item.innerHTML = 'Развернуть ↓'
         }
-        
     })
 });
+
+if(window.innerWidth > 2500) {
+console.log('Ничего у тебя огромный экран');
+}
 
 
 const canvas = document.querySelector('#canvas1');

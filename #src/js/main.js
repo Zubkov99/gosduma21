@@ -14,6 +14,10 @@ spanItems.forEach(item => {
         } else {
         item.innerHTML = 'Развернуть ↓'
         }
-        
     })
 });
+
+if(window.innerWidth > 2500) {
+console.log('Ничего у тебя огромный экран');
+}
+

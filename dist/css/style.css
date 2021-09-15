@@ -94,6 +94,11 @@ header .header__wrapeer .header__description p {
   width: 30vw;
 }
 
+header .header__wrapeer .header__description a {
+  color: #FFFF;
+  font-family: "Golos-Text_Regular";
+}
+
 .main {
   font-family: "Golos-Text_Regular";
   font-style: normal;
@@ -113,13 +118,19 @@ header .header__wrapeer .header__description p {
 }
 
 .main .main__iframe h2 {
-  font-size: calc(30px + 10 * ((100vw - 320px) / 1120));
+  font-size: calc(25px + 15 * ((100vw - 320px) / 1120));
   color: #000000;
-  padding-bottom: 40px;
+  padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
+}
+
+.main .main__iframe p {
+  font-size: calc(16px + 4 * ((100vw - 320px) / 1120));
+  color: #000000;
+  padding-top: 20px;
 }
 
 .main .main__iframe .iframe {
-  width: 80vw;
+  width: 85vw;
   height: 40vw;
   min-height: 200px;
   border-radius: 20px;
@@ -238,6 +249,13 @@ header .header__wrapeer .header__description p {
           transition-duration: 10s;
 }
 
+.main:hover p {
+  color: #FFFFFF;
+  -webkit-transition-duration: 10s;
+       -o-transition-duration: 10s;
+          transition-duration: 10s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -281,6 +299,12 @@ header .header__wrapeer .header__description p {
   font-size: calc(15px + 25 * ((100vw - 320px) / 1120));
   text-align: center;
   width: 100%;
+}
+
+@media (min-width: 2160px) {
+  header {
+    background-image: url("/img/bcImgBig.png");
+  }
 }
 
 @media (max-width: 902px) {

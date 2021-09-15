@@ -1,5 +1,4 @@
 .main {
-    // font-family: Golos;
     font-family: "Golos-Text_Regular";
     font-style: normal;
     font-weight: normal;
@@ -14,15 +13,20 @@
         position: relative;
         top: 40px;
         h2 {
-            @include adaptiv-font(40, 30);
+            @include adaptiv-font(40, 25);
             color: #000000;
-            padding-bottom: 40px;
+            padding-bottom: calc(20px + (40 - 20) * ((100vw - 320px) / (1440 - 320)));
         }
 
+        p {
+            @include adaptiv-font(20, 16);
+            color: #000000;
+            padding-top: 20px;
+        }
         text-align: center;
 
         .iframe {
-            width: 80vw;
+            width: 85vw;
             height: 40vw;
             min-height: 200px;
             border-radius: 20px;
@@ -39,7 +43,6 @@
         
         
         .main__conteiners-item{
-            // transition: all 1000ms ease-in-out;
             transition-duration: 1s;
 
             padding-bottom: calc(10px + (75 - 15) * ((100vw - 320px) / (1400 - 320)));
@@ -94,7 +97,6 @@
 
             #secondItem {
                 background-color: #1E32E2;
-                // grid-row: span 2;
                 
 
                 img {
@@ -130,6 +132,11 @@
     color: #FFFFFF;
     transition-duration: 10s;
     }
+
+    p {
+        color: #FFFFFF;
+        transition-duration: 10s;   
+    }
 }
 
 
@@ -139,8 +146,6 @@
             background-color: #00001E;
             padding-top: 50px;
             display: block;
-
-
 
             .main__conteiners-item {
                 text-align: center;

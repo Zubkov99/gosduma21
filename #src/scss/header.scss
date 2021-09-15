@@ -11,7 +11,6 @@ $maxWidth: 1440;
     $maxWidth: $maxWidth - 320;
     line-height: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
    }
-// Dupin gnida i pizdabol
 
    @mixin adaptiv-imgWidth($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
@@ -49,9 +48,7 @@ header {
             margin-top: 10px;
 
             h1 {
-                // line-height: 76px;
                 // line-height: calc(40px + 36 *(100vw / 1408));
-                // font-size: 75px;
                 // font-size: calc(40px + 35 *(100vw / 1408));
                 @include adaptiv-line(76, 40);
                 @include adaptiv-font(75, 40);
@@ -63,6 +60,11 @@ header {
                 @include adaptiv-line(34, 27);
                 margin-top: 55px;
                 width: 30vw;
+            }
+
+            a {
+                color: #FFFF;
+                font-family: "Golos-Text_Regular";
             }
         }
     }
@@ -90,11 +92,11 @@ header {
                 opacity: .7;
             }    
         }
-
-
-
     }
+}
 
-
-
+@media (min-width: 2160px) {
+    header {
+        background-image: url('/img/bcImgBig.png');
+    }
 }
