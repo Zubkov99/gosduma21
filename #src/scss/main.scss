@@ -69,12 +69,11 @@
                 @include adaptiv-font(20, 10);
                 cursor: pointer;
                 position: relative;
-                transition-duration: 1000ms, 100ms;
-                transition-property: background-color, top;
+                transition-duration: 100ms;
+                transition-property: top;
             }
             span:hover {
-                background-color: #ffffff;
-                top: 2px;
+                top: 3px;
 
             }
             p {
@@ -126,16 +125,16 @@
 
 .main:hover {
     background-color: #00001E;
-    transition-duration: 10s;
+    transition-duration: 5s;
 
     h2 {
     color: #FFFFFF;
-    transition-duration: 10s;
+    transition-duration: 5s;
     }
 
     p {
         color: #FFFFFF;
-        transition-duration: 10s;   
+        transition-duration: 5s;   
     }
 }
 

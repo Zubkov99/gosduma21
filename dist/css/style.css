@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +52,7 @@
 }
 
 header {
-  background-image: url("/img/bcImg.png");
+  background-image: url("/img/bcImg.webp");
   height: auto;
   min-height: 100vh;
   width: 100vw;
@@ -97,6 +95,51 @@ header .header__wrapeer .header__description p {
 header .header__wrapeer .header__description a {
   color: #FFFF;
   font-family: "Golos-Text_Regular";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.anima {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.anima .title1 {
+  font-family: "Golos-Text_Regular";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  white-space: normal;
+  text-align: center;
+  border: 5px solid #000;
+}
+
+.anima .title1 h1 {
+  line-height: calc(40px + 50 * ((100vw - 320px) / 1120));
+  font-size: calc(30px + 50 * ((100vw - 320px) / 1120));
+  padding-bottom: calc(10px + (50 - 30) * ((100vw - 320px) / (1440 - 320)));
+}
+
+.anima .title1 span {
+  line-height: calc(25px + -5 * ((100vw - 320px) / 1120));
+  font-size: calc(18px + 22 * ((100vw - 320px) / 1120));
+}
+
+.anima #canvas1 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .main {
@@ -179,17 +222,16 @@ header .header__wrapeer .header__description a {
   font-size: calc(10px + 10 * ((100vw - 320px) / 1120));
   cursor: pointer;
   position: relative;
-  -webkit-transition-duration: 1000ms, 100ms;
-       -o-transition-duration: 1000ms, 100ms;
-          transition-duration: 1000ms, 100ms;
-  -webkit-transition-property: background-color, top;
-  -o-transition-property: background-color, top;
-  transition-property: background-color, top;
+  -webkit-transition-duration: 100ms;
+       -o-transition-duration: 100ms;
+          transition-duration: 100ms;
+  -webkit-transition-property: top;
+  -o-transition-property: top;
+  transition-property: top;
 }
 
 .main .main__conteiners .main__conteiners-item--text span:hover {
-  background-color: #ffffff;
-  top: 2px;
+  top: 3px;
 }
 
 .main .main__conteiners .main__conteiners-item--text p {
@@ -237,73 +279,28 @@ header .header__wrapeer .header__description a {
 
 .main:hover {
   background-color: #00001E;
-  -webkit-transition-duration: 10s;
-       -o-transition-duration: 10s;
-          transition-duration: 10s;
+  -webkit-transition-duration: 5s;
+       -o-transition-duration: 5s;
+          transition-duration: 5s;
 }
 
 .main:hover h2 {
   color: #FFFFFF;
-  -webkit-transition-duration: 10s;
-       -o-transition-duration: 10s;
-          transition-duration: 10s;
+  -webkit-transition-duration: 5s;
+       -o-transition-duration: 5s;
+          transition-duration: 5s;
 }
 
 .main:hover p {
   color: #FFFFFF;
-  -webkit-transition-duration: 10s;
-       -o-transition-duration: 10s;
-          transition-duration: 10s;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.anima {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-
-.anima .title1 {
-  font-family: "Golos-Text_Regular";
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  white-space: normal;
-  line-height: calc(30px + 60 * ((100vw - 320px) / 1120));
-  font-size: calc(20px + 60 * ((100vw - 320px) / 1120));
-  border-top: 5px solid #000;
-}
-
-#canvas1 {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-#title1::before {
-  content: "проголосуй за ЛДПР";
-  position: absolute;
-  bottom: -40px;
-  line-height: calc(15px + 5 * ((100vw - 320px) / 1120));
-  font-size: calc(15px + 25 * ((100vw - 320px) / 1120));
-  text-align: center;
-  width: 100%;
+  -webkit-transition-duration: 5s;
+       -o-transition-duration: 5s;
+          transition-duration: 5s;
 }
 
 @media (min-width: 2160px) {
   header {
-    background-image: url("/img/bcImgBig.png");
+    background-image: url("/img/bcImgBig.webp");
   }
 }
 

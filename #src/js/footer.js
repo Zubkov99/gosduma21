@@ -1,15 +1,14 @@
 const canvas = document.querySelector('#canvas1');
 const ctx = canvas.getContext('2d');
+let titleElement = document.querySelector('#title1');
+let titleMeasurements = titleElement.getBoundingClientRect();
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let particlesArray = [];
 
-const numberOfParticles = 500;
-
-let titleElement = document.querySelector('#title1');
-let titleMeasurements = titleElement.getBoundingClientRect();
+const numberOfParticles = 550;
 
 let title = {
     x: titleMeasurements.left,
@@ -22,33 +21,11 @@ class Particle {
     constructor(x, y) {
         this.x = x;
         this.y = y;
-        if(canvas.width < 600) {
-            this.size = 6;
-        } else {
-        this.size = Math.random() * 13 + 2;
-        }
-
         this.weight = Math.random() * 2 + 1;
-        if(canvas.width < 600) {
-            this.directionX = (Math.random() * 4) - 1;
-        } else {
-            this.directionX = -2;
-        }
-        // this.directionX = -2;
-        // this.directionX = (Math.random() * 4) - 1;
-
+        this.size = Math.random() * 13 + 2;
+        this.directionX = -2;
     }
     update() {
-
-        if(
-            this.x < title.x + title.width && 
-            this.x + this.size > title.x &&
-            this.y < title.y + title.height &&
-            this.y + this.size > title.y
-            ) {
-            this.y -= 3;
-            this.weight *= -0.5;
-            }
 
         if(this.y > canvas.height) {
             this.y = 0 - this.size;
@@ -63,8 +40,11 @@ class Particle {
     }
 
     draw() {
-        // ctx.fillStyle = 'purple';
-        ctx.fillStyle = '#0007B7';
+        // ctx.fillStyle = '#007AFF';
+        // ctx.fillStyle = '#0007B7';
+        ctx.fillStyle = '#0718DE';
+
+
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
